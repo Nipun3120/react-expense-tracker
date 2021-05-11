@@ -1,8 +1,9 @@
 import NewExpense from './components/NewExpense/NewExpense';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
 import { Typography } from '@material-ui/core';
 
 function App() {
+    
     const expenses = [
         {
             id: 'e1',
@@ -30,11 +31,15 @@ function App() {
         },
     ]
 
+    const addExpenseHandler = (expense) => {
+        
+    }
+
     return ( 
         <>
             <Typography variant='h2' align='center' color='secondary'>Recent Tasks</Typography>
-            <NewExpense />
-            <Expenses expenses={expenses}/>
+            <NewExpense onAddExpense={addExpenseHandler}/>
+            <Expenses expenses={expenses} />
         </>
 
     );
