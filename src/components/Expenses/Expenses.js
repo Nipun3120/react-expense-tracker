@@ -4,6 +4,7 @@ import '../../assets/css/expenses.css';
 import Card from '../../assets/js/Card';
 import ExpensesFilter from './ExpenseFilter';
 import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
 const Expenses = (props) => {
 
@@ -25,6 +26,7 @@ const Expenses = (props) => {
               currentSelectedYear = {filteredYear}
             />
             
+            <ExpensesChart expenses={expenseYearFiltered}/>
             <ExpensesList expenses={expenseYearFiltered}/>
         </Card>  
       </div> 
