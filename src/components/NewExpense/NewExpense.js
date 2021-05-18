@@ -12,6 +12,8 @@ const NewExpense = (props) => {
             id: Math.random().toString()
         };
 
+        
+
         setFormToggle(false)
         props.onAddExpense(expenseData)
     }
